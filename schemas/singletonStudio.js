@@ -1,6 +1,6 @@
 export default {
-  title: 'Home',
-  name: 'home',
+  title: 'Studio',
+  name: 'studio',
   type: 'document',
   __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   fields: [
@@ -11,49 +11,50 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Hero Text',
-      name: 'heroText',
+      title: 'Hero Heading',
+      name: 'heroHeading',
+      type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'The Team Text',
+      name: 'theTeamText',
       type: 'text',
       rows: 5,
       validation: Rule => Rule.required()
     },
     {
-      title: 'Overview Heading',
-      name: 'overviewHeading',
-      type: 'string',
-      validation: Rule => Rule.required()
-    },
-    {
-      title: 'Overview Text',
-      name: 'overviewText',
-      type: 'text',
-      rows: 5,
-      validation: Rule => Rule.required()
-    },
-    {
-      title: 'Mission Heading',
-      name: 'missionHeading',
-      type: 'string',
-      validation: Rule => Rule.required()
-    },
-    {
-      title: "Mission Items",
+      title: "Team",
       type: "array",
-      name: "missionItems",
+      name: "team",
       of: [
         {
           type: "object",
-          name: "missionItem",
+          name: "teamMember",
           fields: [
-            { type: "string", name: "title" },
+            { type: "string", name: "name" },
             { type: "text", rows: 3, name: "text" },
+            { type: "defaultImage", name: "image" },
           ]
         }
       ],
     },
     {
-      title: 'Footer Image',
-      name: 'footerImage',
+      title: 'The Space Heading',
+      name: 'theSpaceHeading',
+      type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'The Space Text',
+      name: 'theSpaceText',
+      type: 'text',
+      rows: 5,
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'The Space Image',
+      name: 'theSpaceImage',
       type: 'defaultImage',
       validation: Rule => Rule.required()
     },

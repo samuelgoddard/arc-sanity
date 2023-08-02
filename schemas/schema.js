@@ -3,9 +3,13 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Singletons
 import singletonHome from './singletonHome'
+import singletonStudio from './singletonStudio'
+import singletonProcess from './singletonProcess'
+import singletonContact from './singletonContact'
+import singletonPrivacy from './singletonPrivacy'
 
 // Documents
-import work from './work'
+// import work from './work'
 
 // Common
 import seo from './common/seo'
@@ -16,7 +20,11 @@ export default createSchema({
   
   types: schemaTypes.concat([
     singletonHome,
-    work,
+    singletonProcess,
+    singletonStudio,
+    singletonContact,
+    singletonPrivacy,
+    // work,
     defaultImage,
     seo
   ]),

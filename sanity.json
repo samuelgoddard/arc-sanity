@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "shiftwalk-sanity-starter"
-  },
   "api": {
-    "projectId": "your-id-here",
+    "projectId": "mc83ygp0",
     "dataset": "production"
+  },
+  "project": {
+    "name": "arc-design-studio"
   },
   "plugins": [
     "@sanity/base",
@@ -16,8 +16,7 @@
     "@sanity/dashboard",
     "media",
     "@sanity/production-preview",
-    "vercel-deploy",
-    "order-documents"
+    "vercel-deploy"
   ],
   "env": {
     "development": {

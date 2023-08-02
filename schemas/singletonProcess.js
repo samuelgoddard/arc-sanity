@@ -1,6 +1,6 @@
 export default {
-  title: 'Home',
-  name: 'home',
+  title: 'Process',
+  name: 'process',
   type: 'document',
   __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   fields: [
@@ -11,39 +11,59 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Hero Text',
-      name: 'heroText',
+      title: 'Hero Heading',
+      name: 'heroHeading',
+      type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'Our View Image',
+      name: 'ourViewImage',
+      type: 'defaultImage',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'Our View Text',
+      name: 'ourViewText',
       type: 'text',
       rows: 5,
       validation: Rule => Rule.required()
     },
     {
-      title: 'Overview Heading',
-      name: 'overviewHeading',
+      title: 'The Network Heading',
+      name: 'theNetworkHeading',
       type: 'string',
       validation: Rule => Rule.required()
     },
     {
-      title: 'Overview Text',
-      name: 'overviewText',
+      title: 'The Network Text',
+      name: 'theNetworkText',
       type: 'text',
       rows: 5,
       validation: Rule => Rule.required()
     },
     {
-      title: 'Mission Heading',
-      name: 'missionHeading',
-      type: 'string',
-      validation: Rule => Rule.required()
-    },
-    {
-      title: "Mission Items",
+      title: "The Network List Items",
       type: "array",
-      name: "missionItems",
+      name: "theNetworkListItems",
+      of: [
+        { type: "string", name: "title" }
+      ],
+    },
+    {
+      title: 'The Response Heading',
+      name: 'theResponseHeading',
+      type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: "The Response Items",
+      type: "array",
+      name: "theResponseItems",
       of: [
         {
           type: "object",
-          name: "missionItem",
+          name: "theResponseItem",
           fields: [
             { type: "string", name: "title" },
             { type: "text", rows: 3, name: "text" },
