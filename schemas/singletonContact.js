@@ -30,6 +30,12 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      title: 'Instagram',
+      name: 'instagram',
+      type: 'url',
+      validation: Rule => Rule.required()
+    },
+    {
       title: 'Address',
       name: 'address',
       type: 'string',
