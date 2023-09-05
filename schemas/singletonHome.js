@@ -18,9 +18,21 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      title: 'Hero Image',
+      name: 'heroImage',
+      type: 'defaultImage',
+      validation: Rule => Rule.required()
+    },
+    {
       title: 'Overview Heading',
       name: 'overviewHeading',
       type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'Overview Image',
+      name: 'overviewImage',
+      type: 'defaultImage',
       validation: Rule => Rule.required()
     },
     {

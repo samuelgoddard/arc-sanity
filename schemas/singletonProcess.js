@@ -18,7 +18,7 @@ export default {
     },
     {
       title: 'Our View Image',
-      name: 'ourViewImage',
+      name: 'ourViewImagee',
       type: 'defaultImage',
       validation: Rule => Rule.required()
     },
@@ -47,7 +47,33 @@ export default {
       type: "array",
       name: "theNetworkListItems",
       of: [
-        { type: "string", name: "title" }
+        {
+          type: "object",
+          name: "networkListItem",
+          fields: [
+            { type: "string", name: "title" },
+            { type: "string", name: "department", options: {
+              list: [
+                { title: "Arc Team", value: "arcTeam" },
+                { title: "Supporting Experts", value: "supportingExpers" },
+                { title: "Wider Network", value: "widerNetwork" },
+              ],
+              },
+            }
+          ],
+          preview: {
+            select: {
+              title: 'title',
+              department: 'department'
+            },
+            prepare ({ title, department }) {
+              return {
+                title: title,
+                subtitle: department
+              }
+            }
+          }
+        }
       ],
     },
     {
@@ -65,9 +91,10 @@ export default {
           type: "object",
           name: "theResponseItem",
           fields: [
+            { type: "defaultImage", name: "image" },
             { type: "string", name: "title" },
             { type: "text", rows: 3, name: "text" },
-          ]
+          ],
         }
       ],
     },
