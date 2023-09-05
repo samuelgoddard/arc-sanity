@@ -57,6 +57,7 @@ export default {
           type: "object",
           name: "missionItem",
           fields: [
+            { type: "defaultImage", name: "image" },
             { type: "string", name: "title" },
             { type: "text", rows: 3, name: "text" },
           ]

@@ -42,6 +42,17 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      title: 'Company Name',
+      name: 'companyName',
+      type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'Company Number',
+      name: 'companyNumber',
+      type: 'string'
+    },
+    {
       title: 'SEO / Share Settings',
       name: 'seo',
       type: 'seo'

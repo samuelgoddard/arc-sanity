@@ -33,9 +33,24 @@ export default {
           name: "teamMember",
           fields: [
             { type: "string", name: "name" },
+            { type: "string", name: "jobTitle" },
             { type: "text", rows: 3, name: "text" },
             { type: "defaultImage", name: "image" },
-          ]
+          ],
+          preview: {
+            select: {
+              name: 'name',
+              jobTitle: 'jobTitle',
+              image: 'image'
+            },
+            prepare ({ name, jobTitle, image }) {
+              return {
+                title: name,
+                subtitle: jobTitle,
+                media: image
+              }
+            }
+          }
         }
       ],
     },

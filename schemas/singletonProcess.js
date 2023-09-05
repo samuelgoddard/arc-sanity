@@ -99,6 +99,12 @@ export default {
       ],
     },
     {
+      title: 'Footer Text',
+      name: 'footerText',
+      type: 'text',
+      rows: 4
+    },
+    {
       title: 'Footer Image',
       name: 'footerImage',
       type: 'defaultImage',
