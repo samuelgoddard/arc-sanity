@@ -1,3 +1,7 @@
+import {
+  FiUser
+} from 'react-icons/fi'
+
 export default {
   title: 'Studio',
   name: 'studio',
@@ -48,6 +52,40 @@ export default {
                 title: name,
                 subtitle: jobTitle,
                 media: image
+              }
+            }
+          }
+        }
+      ],
+    },
+    {
+      title: 'Alumni Text',
+      name: 'alumniText',
+      type: 'text',
+      rows: 4,
+    },
+    {
+      title: "Alumni",
+      type: "array",
+      name: "alumni",
+      of: [
+        {
+          type: "object",
+          name: "teamMember",
+          icon: FiUser,
+          fields: [
+            { type: "string", name: "name" },
+            { type: "string", name: "jobTitle" },
+          ],
+          preview: {
+            select: {
+              name: 'name',
+              jobTitle: 'jobTitle',
+            },
+            prepare ({ name, jobTitle }) {
+              return {
+                title: name,
+                subtitle: jobTitle
               }
             }
           }
