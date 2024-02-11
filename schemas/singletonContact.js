@@ -24,8 +24,14 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Phone',
+      title: 'Phone (Nottingham)',
       name: 'phone',
+      type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'Phone (London)',
+      name: 'phoneLondon',
       type: 'string',
       validation: Rule => Rule.required()
     },
@@ -36,9 +42,27 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Address',
+      title: 'Address (Nottingham)',
       name: 'address',
       type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'Address (Nottingham) Map Image',
+      name: 'addressMapImage',
+      type: 'defaultImage',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'Address (London)',
+      name: 'addressLondon',
+      type: 'string',
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'Address (London) Map Image',
+      name: 'addressLondonMapImage',
+      type: 'defaultImage',
       validation: Rule => Rule.required()
     },
     {
