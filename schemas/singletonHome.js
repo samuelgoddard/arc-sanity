@@ -24,6 +24,12 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      title: 'Hero Video',
+      description: 'This video will be displayed in the hero section of the home page. It will be displayed as a muted, looping background video, please be considerate of file size.',
+      name: 'heroVideo',
+      type: 'file',
+    },
+    {
       title: 'Overview Heading',
       name: 'overviewHeading',
       type: 'string',
@@ -57,7 +63,7 @@ export default {
           type: "object",
           name: "missionItem",
           fields: [
-            { type: "defaultImage", name: "image" },
+            { type: "defaultImage", name: "shapeImage", title: "Image" },
             { type: "string", name: "title" },
             { type: "text", rows: 3, name: "text" },
           ]

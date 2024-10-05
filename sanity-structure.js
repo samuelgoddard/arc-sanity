@@ -1,12 +1,14 @@
 import S from "@sanity/desk-tool/structure-builder";
 import IframePreview from './preview/IFramePreview'
+import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 
 import {
   FiHome,
   FiCamera,
   FiMail,
   FiBox,
-  FiFileText
+  FiFileText,
+  FiList
 } from 'react-icons/fi'
 
 import { getGlobalSlug, previewURL } from './utils/resolveProductionUrl'
@@ -40,6 +42,13 @@ export default () =>
       S.listItem().title('Studio').child(S.editor().id('studio').schemaType('studio').documentId('singleton-studio').views(getPreview('studio'))).icon(FiCamera),
       S.divider(),
       S.listItem().title('Process').child(S.editor().id('process').schemaType('process').documentId('singleton-process').views(getPreview('process'))).icon(FiBox),
+      S.divider(),
+      // S.listItem().title('Projects').child(S.documentTypeList('project')).icon(FiBox),
+      orderableDocumentListDeskItem({
+        type: 'project',
+        title: 'Projects',
+        icon: FiBox,
+      }),
       S.divider(),
       S.listItem().title('Contact').child(S.editor().id('contact').schemaType('contact').documentId('singleton-contact').views(getPreview('contact'))).icon(FiMail),
       S.divider(),

@@ -1,3 +1,5 @@
+import { FiInfo } from "react-icons/fi"
+
 export default {
   title: 'Process',
   name: 'process',
@@ -28,6 +30,32 @@ export default {
       type: 'text',
       rows: 5,
       validation: Rule => Rule.required()
+    },
+    {
+      title: "Our View Services",
+      type: "array",
+      name: "ourViewServices",
+      of: [
+        {
+          type: "object",
+          name: "service",
+          icon: FiInfo,
+          fields: [
+            { type: "string", name: "title", validation: Rule => Rule.required() },
+            { type: 'text', name: "text", rows: 5, validation: Rule => Rule.required()}
+          ],
+          preview: {
+            select: {
+              title: 'title',
+            },
+            prepare ({ title  }) {
+              return {
+                title: title,
+              }
+            }
+          }
+        }
+      ],
     },
     {
       title: 'The Network Heading',
@@ -75,6 +103,28 @@ export default {
           }
         }
       ],
+    },
+    {
+      title: 'Teams We Work With Text',
+      name: 'teamsWeWorkWithText',
+      type: 'text',
+      rows: 5,
+      validation: Rule => Rule.required()
+    },
+    {
+      title: 'Teams We Work With Logos',
+      name: 'teamsWeWorkWithLogos',
+      type: 'array',
+      description: "The logo images for this project, ideally SVG or PNG format, ideally black colour",
+      of: [
+        {
+          type: 'defaultImage', title: 'Image',
+        },
+      ],
+      options: {
+        layout: 'grid',
+      },
+      validation: Rule => Rule.required().min(7).max(30)
     },
     {
       title: 'The Response Heading',

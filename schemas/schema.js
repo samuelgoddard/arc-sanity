@@ -14,6 +14,8 @@ import singletonPrivacy from './singletonPrivacy'
 // Common
 import seo from './common/seo'
 import defaultImage from './common/defaultImage'
+import project from './project'
+import contentSimple from './common/contentSimple'
 
 export default createSchema({
   name: 'default',
@@ -25,6 +27,8 @@ export default createSchema({
     singletonContact,
     singletonPrivacy,
     // work,
+    contentSimple,
+    project,
     defaultImage,
     seo
   ]),
