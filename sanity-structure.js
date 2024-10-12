@@ -48,6 +48,7 @@ export default () =>
         type: 'project',
         title: 'Projects',
         icon: FiBox,
+        views: getPreview('projects')
       }),
       S.divider(),
       S.listItem().title('Contact').child(S.editor().id('contact').schemaType('contact').documentId('singleton-contact').views(getPreview('contact'))).icon(FiMail),

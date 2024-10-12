@@ -11,7 +11,7 @@ const secret = process.env.SANITY_STUDIO_SANITY_PREVIEW_SECRET
 export const getGlobalSlug = (slug) => globalSlugs[slug]
 
 // Change remote url...
-const remoteURL = 'https://arc-design-studio.vercel.app'
+const remoteURL = 'https://arc-git-site-updates-samgoddard.vercel.app/'
 const localURL = 'http://localhost:3000'
 export const previewURL = window.location.hostname === 'localhost' ? localURL : remoteURL
 
