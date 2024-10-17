@@ -17,12 +17,12 @@ export default {
       rows: 5,
       validation: Rule => Rule.required()
     },
-    {
-      title: 'Hero Image',
-      name: 'heroImage',
-      type: 'defaultImage',
-      validation: Rule => Rule.required()
-    },
+    // {
+    //   title: 'Hero Image',
+    //   name: 'heroImage',
+    //   type: 'defaultImage',
+    //   validation: Rule => Rule.required()
+    // },
     {
       title: 'Hero Video',
       description: 'This video will be displayed in the hero section of the home page. It will be displayed as a muted, looping background video, please be considerate of file size.',

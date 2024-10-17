@@ -50,7 +50,7 @@ export default {
       options: {
         layout: 'grid',
       },
-      validation: Rule => Rule.required().min(1).max(15)
+      validation: Rule => Rule.required().min(1).max(20)
     },
     {
       name: 'slug',
